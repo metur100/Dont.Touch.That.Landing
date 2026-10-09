@@ -6,7 +6,7 @@
 <title>Don't Touch That! – the game of buttons you must NOT press</title>
 <meta name="description" content="Don't Touch That! is a funny reaction and puzzle game: 100 levels of buttons you must NOT press. Free, no ads, no tracking, fully offline. For Android and iPhone.">
 <meta name="theme-color" content="#FFF4E0" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#1B1033" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#160C2B" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="https://metur100.github.io/Dont.Touch.That.Landing/">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/icon-512.png">
@@ -31,105 +31,200 @@
   "author": { "@type": "Person", "name": "Medin Turkes" }
 }
 </script>
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-<header class="top">
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="top" id="top">
   <div class="wrap">
-    <a class="brand" href="./"><img src="assets/favicon.png" alt="" width="40" height="40">Don't Touch That!</a>
+    <a class="brand" href="./"><img src="assets/favicon.png" alt="" width="38" height="38">Don't Touch That!</a>
     <nav>
+      <a class="opt" href="#levels">Levels</a>
       <a class="opt" href="#features">Features</a>
-      <a href="#support">Support</a>
-      <a class="opt" href="privacy.html">Privacy</a>
+      <a class="opt" href="#support">Support</a>
+      <a class="pill" href="#download">Get the game</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <div class="wrap hero">
-    <img class="icon" src="assets/icon-512.png" alt="Don't Touch That! app icon" width="132" height="132">
-    <h1>Don't Touch That!</h1>
-    <p class="tag">100 levels of buttons you must <strong>NOT</strong> press. Can you resist? Probably not.</p>
+  <!-- Hero -->
+  <div class="hero">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow reveal"><span class="dot"></span>Free · No ads · Works offline</span>
+        <h1 class="reveal" style="--i:1">
+          <span class="line">Don't</span>
+          <span class="line">Touch <span class="hot">That!</span></span>
+        </h1>
+        <p class="tag reveal" style="--i:2">100 levels of buttons you must <strong>NOT</strong> press. Can you resist? Probably not.</p>
 
-    <!-- Replace href="#" with the store URLs and remove aria-disabled once the app is live:
-         Google Play: https://play.google.com/store/apps/details?id=com.certidevelopment.donttouchthat
-         App Store:   https://apps.apple.com/app/idXXXXXXXXXX -->
-    <div class="stores">
-      <a class="store" href="#" aria-disabled="true">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.5v19a1 1 0 0 0 1.5.86l16-9.5a1 1 0 0 0 0-1.72l-16-9.5A1 1 0 0 0 4 2.5z"/></svg>
-        <div><small>Coming soon to</small><span>Google Play</span></div>
-      </a>
-      <a class="store" href="#" aria-disabled="true">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 1h10a2 2 0 0 1 2 2v18a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zm0 3v14h10V4H7zm5 15.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"/></svg>
-        <div><small>Coming soon to the</small><span>App Store</span></div>
-      </a>
+        <!-- Store links: replace href="#" with the real URLs and remove aria-disabled once live:
+             Google Play: https://play.google.com/store/apps/details?id=com.certidevelopment.donttouchthat
+             App Store:   https://apps.apple.com/app/idXXXXXXXXXX -->
+        <div class="stores reveal" style="--i:3">
+          <a class="store" href="#" aria-disabled="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.5v19a1 1 0 0 0 1.5.86l16-9.5a1 1 0 0 0 0-1.72l-16-9.5A1 1 0 0 0 4 2.5z"/></svg>
+            <div><small>Coming soon to</small><span>Google Play</span></div>
+          </a>
+          <a class="store" href="#" aria-disabled="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 1h10a2 2 0 0 1 2 2v18a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zm0 3v14h10V4H7zm5 15.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"/></svg>
+            <div><small>Coming soon to the</small><span>App Store</span></div>
+          </a>
+        </div>
+        <ul class="checks reveal" style="--i:4">
+          <li>Android &amp; iPhone</li>
+          <li>No in-app purchases</li>
+          <li>No tracking</li>
+        </ul>
+      </div>
+
+      <div class="phones parallax" data-speed="-0.08" aria-hidden="true">
+        <div class="phone-set reveal zoom" style="--i:2">
+          <div class="phone p-left float slow"><img src="assets/phone/04-chicken.webp" alt="" width="480" height="1043"></div>
+          <div class="phone p-right float slower"><img src="assets/phone/06-fake.webp" alt="" width="480" height="1043"></div>
+          <div class="phone p-main float"><img src="assets/phone/02-button.webp" alt="" width="480" height="1043"></div>
+          <span class="sticker s1">🔴</span>
+          <span class="sticker s2">🐔</span>
+          <span class="sticker s3">💣</span>
+        </div>
+      </div>
     </div>
-    <p class="note">Free · No ads · No in-app purchases · Works offline</p>
-
-    <button class="bigbtn" id="bigbtn" type="button" aria-describedby="bigbtn-msg">DON'T</button>
-    <p class="bigbtn-msg" id="bigbtn-msg" aria-live="polite"></p>
   </div>
 
-  <section id="screens">
+  <!-- Marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>DON'T TAP<em>✦</em> DON'T SWIPE LEFT<em>✦</em> DON'T HOLD IT<em>✦</em> DON'T TOUCH THE CHICKEN<em>✦</em> DON'T PRESS THE RED ONE<em>✦</em> DON'T SHAKE THE SODA<em>✦</em></span>
+      <span>DON'T TAP<em>✦</em> DON'T SWIPE LEFT<em>✦</em> DON'T HOLD IT<em>✦</em> DON'T TOUCH THE CHICKEN<em>✦</em> DON'T PRESS THE RED ONE<em>✦</em> DON'T SHAKE THE SODA<em>✦</em></span>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <section>
     <div class="wrap">
-      <h2>It is RIGHT there.</h2>
-      <p class="lead">Every level gives you one simple instruction. Then the game starts cheating.</p>
-      <div class="shots" tabindex="0" aria-label="Screenshots">
-        <img src="assets/screens/01.webp" width="540" height="960" loading="lazy" alt="Title screen: Whatever you do, don't touch that">
-        <img src="assets/screens/02.webp" width="540" height="960" loading="lazy" alt="Level: don't press the big button">
-        <img src="assets/screens/03.webp" width="540" height="960" loading="lazy" alt="Fail screen: you will fail and it will be hilarious">
-        <img src="assets/screens/04.webp" width="540" height="960" loading="lazy" alt="Level: grab the corn, avoid the chicken">
-        <img src="assets/screens/05.webp" width="540" height="960" loading="lazy" alt="Level: read carefully, then tap">
-        <img src="assets/screens/06.webp" width="540" height="960" loading="lazy" alt="Level with fake buttons and fake wins">
-        <img src="assets/screens/07.webp" width="540" height="960" loading="lazy" alt="Memory and reflex levels">
-        <img src="assets/screens/08.webp" width="540" height="960" loading="lazy" alt="Daily challenge: same levels for everyone">
+      <div class="stats">
+        <div class="stat reveal" style="--i:0"><b data-count="100">100</b><span>hand-made levels</span></div>
+        <div class="stat reveal" style="--i:1"><b data-count="3">3</b><span>game modes</span></div>
+        <div class="stat reveal" style="--i:2"><b data-count="13">13</b><span>achievements</span></div>
+        <div class="stat reveal" style="--i:3"><b>0</b><span>ads, ever</span></div>
       </div>
     </div>
   </section>
 
+  <!-- Gallery -->
+  <section id="levels" style="padding-top:24px">
+    <div class="wrap">
+      <span class="kicker reveal">The levels</span>
+      <h2 class="reveal" style="--i:1">Every level lies to you.</h2>
+      <p class="lead reveal" style="--i:2">One simple instruction per level. Then buttons beg, run away, fake a win, or swap places while you read.</p>
+    </div>
+    <div class="gallery-wrap">
+      <div class="gallery" id="gallery" tabindex="0" aria-label="Screenshots">
+        <figure class="shot reveal" style="--i:0"><div class="phone"><img src="assets/phone/01-menu.webp" width="480" height="1043" loading="lazy" alt="Main menu with Play, Endless and Daily modes"></div><h3>Whatever you do…</h3><p>…don't touch that.</p></figure>
+        <figure class="shot reveal" style="--i:1"><div class="phone"><img src="assets/phone/02-button.webp" width="480" height="1043" loading="lazy" alt="Level: don't press the big button"></div><h3>It is RIGHT there.</h3><p>Don't press the big button.</p></figure>
+        <figure class="shot reveal" style="--i:2"><div class="phone"><img src="assets/phone/03-fail.webp" width="480" height="1043" loading="lazy" alt="Fail screen"></div><h3>You will fail.</h3><p>And it will be hilarious.</p></figure>
+        <figure class="shot reveal" style="--i:3"><div class="phone"><img src="assets/phone/04-chicken.webp" width="480" height="1043" loading="lazy" alt="Level: grab the corn, don't touch the chicken"></div><h3>The chicken knows.</h3><p>Grab the corn. Avoid the chicken.</p></figure>
+        <figure class="shot reveal" style="--i:4"><div class="phone"><img src="assets/phone/05-bombs.webp" width="480" height="1043" loading="lazy" alt="Level with balloons and bombs"></div><h3>Pop. Don't boom.</h3><p>Read carefully. Then tap.</p></figure>
+        <figure class="shot reveal" style="--i:5"><div class="phone"><img src="assets/phone/06-fake.webp" width="480" height="1043" loading="lazy" alt="Level with fake buttons"></div><h3>Trust nothing.</h3><p>Fake buttons. Fake wins.</p></figure>
+        <figure class="shot reveal" style="--i:6"><div class="phone"><img src="assets/phone/07-memory.webp" width="480" height="1043" loading="lazy" alt="Memory level"></div><h3>Memory. Reflexes.</h3><p>Lies. 100 levels of it.</p></figure>
+        <figure class="shot reveal" style="--i:7"><div class="phone"><img src="assets/phone/08-daily.webp" width="480" height="1043" loading="lazy" alt="Daily challenge"></div><h3>A new challenge daily</h3><p>Same levels for everyone.</p></figure>
+      </div>
+      <div class="gallery-nav">
+        <button type="button" data-dir="-1" aria-label="Previous screenshots">←</button>
+        <button type="button" data-dir="1" aria-label="Next screenshots">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Try it -->
+  <section>
+    <div class="wrap narrow">
+      <div class="tryit reveal zoom" id="tryit">
+        <span class="kicker">Warm-up level</span>
+        <h2>Don't press the button.</h2>
+        <p class="lead">That's it. That's the whole level.</p>
+        <div class="arena" id="arena">
+          <button class="bigbtn" id="bigbtn" type="button" aria-describedby="bigbtn-msg">DON'T</button>
+        </div>
+        <p class="bigbtn-msg" id="bigbtn-msg" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
   <section id="features">
     <div class="wrap">
-      <h2>What's inside</h2>
-      <p class="lead">Buttons pulse, beg and run away. A chicken chases your finger. Instructions change while you read them.</p>
+      <span class="kicker reveal">What's inside</span>
+      <h2 class="reveal" style="--i:1">Small game. Big temptation.</h2>
+      <p class="lead reveal" style="--i:2">Levels take 3–15 seconds. Stopping after one is the hardest level of all.</p>
       <div class="grid">
-        <div class="card"><div class="emoji" aria-hidden="true">🔴</div><h3>100 hand-made levels</h3><p>10 chapters of tempting buttons, fake success screens, reversed controls and multi-stage boss levels.</p></div>
-        <div class="card"><div class="emoji" aria-hidden="true">🎮</div><h3>3 game modes</h3><p>Classic with 3 lives, Endless that keeps getting harder, and a Daily Challenge that's the same for everyone.</p></div>
-        <div class="card"><div class="emoji" aria-hidden="true">🏆</div><h3>Resist and score</h3><p>Streaks, reaction bonuses, 13 achievements and detailed stats on everything you touched.</p></div>
-        <div class="card"><div class="emoji" aria-hidden="true">🎨</div><h3>Unlockable themes</h3><p>Neon, Space, Underwater, Halloween and Christmas. Plus light and dark mode.</p></div>
-        <div class="card"><div class="emoji" aria-hidden="true">👍</div><h3>Made for one thumb</h3><p>Levels take 3–15 seconds. Perfect for quick breaks, with sounds and haptic feedback.</p></div>
-        <div class="card"><div class="emoji" aria-hidden="true">🔒</div><h3>Fair and private</h3><p>Free, no ads, no account, no tracking. Fully offline. Colour-blind labels and reduced shake.</p></div>
+        <div class="feature reveal" style="--i:0"><div class="ico" aria-hidden="true">🔴</div><h3>100 hand-made levels</h3><p>10 chapters of tempting buttons, reversed controls and multi-stage boss levels.</p></div>
+        <div class="feature reveal" style="--i:1"><div class="ico" aria-hidden="true">🎮</div><h3>3 game modes</h3><p>Classic with 3 lives, Endless that keeps getting harder, and a Daily Challenge that's the same for everyone.</p></div>
+        <div class="feature reveal" style="--i:2"><div class="ico" aria-hidden="true">🏆</div><h3>Resist and score</h3><p>Streaks, reaction bonuses, 13 achievements and stats on everything you touched.</p></div>
+        <div class="feature reveal" style="--i:0"><div class="ico" aria-hidden="true">🎨</div><h3>Unlockable themes</h3><p>Neon, Space, Underwater, Halloween and Christmas. Plus light and dark mode.</p></div>
+        <div class="feature reveal" style="--i:1"><div class="ico" aria-hidden="true">👍</div><h3>Made for one thumb</h3><p>Quick levels with satisfying animations, sounds and haptic feedback.</p></div>
+        <div class="feature reveal" style="--i:2"><div class="ico" aria-hidden="true">🔒</div><h3>Fair and private</h3><p>Free, no ads, no account, no tracking, fully offline. Colour-blind labels and reduced shake.</p></div>
       </div>
     </div>
   </section>
 
+  <!-- Support -->
   <section id="support">
     <div class="wrap narrow">
-      <h2>Support</h2>
-      <p class="lead">Found a bug, stuck on a level or have an idea for a new way to tempt people?<br>Write to <a href="mailto:certidevelopment@gmail.com">certidevelopment@gmail.com</a>.</p>
+      <span class="kicker reveal">Support</span>
+      <h2 class="reveal" style="--i:1">Questions? Touch these.</h2>
+      <p class="lead reveal" style="--i:2">The only things on this page you're allowed to touch.</p>
       <div class="faq">
-        <details>
+        <details class="reveal">
           <summary>A level feels impossible. What am I doing wrong?</summary>
           <p>Read the small hint under the instruction. Some levels want you to act, most want you to resist. And read the instruction twice. It might be lying.</p>
         </details>
-        <details>
+        <details class="reveal">
           <summary>I lost my progress. Can you restore it?</summary>
           <p>Progress is stored only on your device. We never receive it, so it can't be restored after uninstalling the game or resetting progress.</p>
         </details>
-        <details>
+        <details class="reveal">
           <summary>Does the game need an internet connection?</summary>
           <p>No. Everything, including the Daily Challenge, works fully offline.</p>
         </details>
-        <details>
+        <details class="reveal">
           <summary>Why does the game want motion access on iPhone?</summary>
           <p>One level checks whether you shake your phone. (Spoiler: don't.) The sensor is only read during that level and the data never leaves your device.</p>
         </details>
-        <details>
+        <details class="reveal">
           <summary>Are there ads or in-app purchases?</summary>
           <p>No. The game is completely free.</p>
         </details>
-        <details>
+        <details class="reveal">
           <summary>How do I delete my data?</summary>
-          <p>Use <em>Settings → Reset progress</em> in the game, or uninstall it. There is no data stored anywhere else. See the <a href="privacy.html">privacy policy</a>.</p>
+          <p>Use Settings → Reset progress in the game, or uninstall it. Nothing is stored anywhere else. See the <a href="privacy.html">privacy policy</a>.</p>
         </details>
+      </div>
+      <p class="contact reveal">Found a bug or have an idea for a new way to tempt people?<br>Write to <a href="mailto:certidevelopment@gmail.com">certidevelopment@gmail.com</a></p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="download" style="padding-top:24px">
+    <div class="wrap">
+      <div class="cta reveal zoom">
+        <img src="assets/icon-512.png" alt="" width="96" height="96">
+        <h2>Whatever you do…<br>don't touch that.</h2>
+        <p>Free on Android and iPhone. No ads, no account, no internet needed.</p>
+        <div class="stores">
+          <a class="store" href="#" aria-disabled="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.5v19a1 1 0 0 0 1.5.86l16-9.5a1 1 0 0 0 0-1.72l-16-9.5A1 1 0 0 0 4 2.5z"/></svg>
+            <div><small>Coming soon to</small><span>Google Play</span></div>
+          </a>
+          <a class="store" href="#" aria-disabled="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 1h10a2 2 0 0 1 2 2v18a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zm0 3v14h10V4H7zm5 15.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"/></svg>
+            <div><small>Coming soon to the</small><span>App Store</span></div>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -140,31 +235,13 @@
     <nav>
       <a href="privacy.html">Privacy Policy</a>
       <a href="terms.html">Terms of Use</a>
+      <a href="#support">Support</a>
       <a href="mailto:certidevelopment@gmail.com">Contact</a>
     </nav>
     <p>© 2026 Medin Turkes · Certi Development</p>
   </div>
 </footer>
 
-<script>
-  (function () {
-    var btn = document.getElementById('bigbtn');
-    var msg = document.getElementById('bigbtn-msg');
-    var lines = [
-      'You touched it.',
-      'Again? Really?',
-      'The chicken saw that.',
-      'That was a test. You failed.',
-      'OK, at this point just download the game.',
-      'Curiosity Killed the Button.'
-    ];
-    var n = 0;
-    btn.addEventListener('click', function () {
-      msg.textContent = lines[Math.min(n, lines.length - 1)];
-      n++;
-      if (navigator.vibrate) navigator.vibrate(30);
-    });
-  })();
-</script>
+<script src="assets/main.js" defer></script>
 </body>
 </html>
